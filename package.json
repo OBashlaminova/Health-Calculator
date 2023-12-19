@@ -1,0 +1,48 @@
+{
+  "name": "bmi-calculator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint . --ext .js --ext .jsx",
+    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
+    "command": "npm run lint && webpack --config webpack.prod.js",
+    "serve": "webpack serve --config webpack.dev.js",
+    "test": "",
+    "coverage": "",
+    "prepare": "",
+    "endtest": ""
+  },
+  "author": "Volha Bashlaminava",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.21.0",
+    "@babel/preset-react": "^7.18.6",
+    "@typescript-eslint/eslint-plugin": "^5.55.0",
+    "@typescript-eslint/parser": "^5.55.0",
+    "babel-loader": "^9.1.2",
+    "css-loader": "^6.7.3",
+    "eslint": "^8.36.0",
+    "eslint-plugin-react": "^7.32.2",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.5.0",
+    "prettier": "^2.8.4",
+    "prop-types": "^15.8.1",
+    "react-error-boundary": "^3.1.4",
+    "react-router-dom": "^6.9.0",
+    "sass": "^1.59.2",
+    "sass-loader": "^13.2.0",
+    "style-loader": "^3.3.2",
+    "terser-webpack-plugin": "^5.3.7",
+    "ts-loader": "^9.4.2",
+    "typescript": "^4.9.5",
+    "webpack": "^5.76.1",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.11.1",
+    "webpack-merge": "^5.8.0"
+  }
+}
