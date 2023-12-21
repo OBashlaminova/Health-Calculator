@@ -1,0 +1,11 @@
+.header {
+  background: #fff;
+
+  &__menu {
+    justify-content: center;
+  }
+
+  &__menu .menu-item {
+    margin: 0 20px;
+  }
+}

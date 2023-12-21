@@ -4,7 +4,7 @@ import { ErrorBoundary } from 'react-error-boundary';
 
 import Error from 'Components/Error/Error';
 
-import HomePage from 'Pages/HomePage/HomePage';
+import BMIPage from 'Pages/BMIPage/BMIPage';
 import NotFoundPage from 'Pages/NotFoundPage/NotFoundPage';
 
 export default function App() {
@@ -12,7 +12,8 @@ export default function App() {
     <ErrorBoundary FallbackComponent={Error}>
       <Router>
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          {/* <Route path="/" element={< />} /> */}
+          <Route path="/bmi" element={<BMIPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </Router>

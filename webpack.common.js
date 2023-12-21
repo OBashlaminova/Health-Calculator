@@ -13,7 +13,8 @@ module.exports = {
       Components: path.resolve(__dirname, 'src/components/'),
       Features: path.resolve(__dirname, 'src/features/'),
       Pages: path.resolve(__dirname, 'src/pages/'),
-      Src: path.resolve(__dirname, 'src/')
+      Src: path.resolve(__dirname, 'src/'),
+      Styles: path.resolve(__dirname, 'src/styles/')
     },
     extensions: ['', '.js', '.jsx']
   },
