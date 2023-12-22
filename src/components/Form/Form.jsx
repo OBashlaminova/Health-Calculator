@@ -2,14 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Form, Button, InputNumber, Radio, Space } from 'antd';
 
-import './Form.scss';
+import 'Styles/global.scss';
 
 FormComponent.propTypes = {
-  setValue: PropTypes.func,
-  calculateValue: PropTypes.func
+  calculateValue: PropTypes.func,
+  setAge: PropTypes.oneOfType([PropTypes.func, PropTypes.any]),
+  setValue: PropTypes.func
 };
 
-function FormComponent({ setValue, calculateValue }) {
+function FormComponent({ setAge, setValue, calculateValue }) {
   const validateMessages = {
     required: '${label} is required!'
   };
@@ -23,8 +24,12 @@ function FormComponent({ setValue, calculateValue }) {
     wrapperCol: { offset: 4, span: 16 }
   };
 
-  function handleSubmit({ height, weight }) {
-    setValue(calculateValue(height, weight));
+  function handleSubmit({ age, sex, height, weight }) {
+    setValue(calculateValue(age, sex, height, weight));
+
+    if (setAge) {
+      setAge(age);
+    }
   }
 
   return (
@@ -35,6 +40,17 @@ function FormComponent({ setValue, calculateValue }) {
       validateMessages={validateMessages}
       onFinish={handleSubmit}
     >
+      <Form.Item label="Age" name="age" rules={[{ required: true }]}>
+        <InputNumber className="form__input" />
+      </Form.Item>
+
+      <Form.Item label="Sex" name="sex" rules={[{ required: true }]}>
+        <Radio.Group className="form__input">
+          <Radio.Button value="male">Male</Radio.Button>
+          <Radio.Button value="female">Female</Radio.Button>
+        </Radio.Group>
+      </Form.Item>
+
       <Form.Item label="Height" name="height" rules={[{ required: true }]}>
         <InputNumber className="form__input" />
       </Form.Item>

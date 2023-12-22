@@ -5,7 +5,7 @@ import { PercentageOutlined, ExperimentOutlined } from '@ant-design/icons';
 
 const { Header } = Layout;
 
-import './Header.scss';
+import 'Styles/global.scss';
 
 function HeaderComponent() {
   const items = [

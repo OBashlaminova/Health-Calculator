@@ -1,0 +1,49 @@
+:root {
+  --grey: #05050530;
+  --light-grey: #0505050f;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  padding: 0 50px;
+}
+
+.header {
+  background: white;
+  box-shadow: 0 5px 5px -5px var(--grey);
+  padding: 0;
+
+  &__menu {
+    justify-content: center;
+  }
+
+  &__menu .menu-item {
+    margin: 0 20px;
+  }
+}
+
+.form {
+  &__input {
+    min-width: 145px;
+  }
+}
+
+.collapse {
+  margin-bottom: 3em;
+  width: 440px;
+}
+
+.footer {
+  background: white;
+  border-top: 1px solid var(--light-grey);
+  box-shadow: 0 -5px 5px -5px var(--grey);
+
+  &__icon svg {
+    color: black;
+    height: 1.3em;
+    width: 1.3em;
+  }
+}
