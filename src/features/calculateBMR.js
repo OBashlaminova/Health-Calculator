@@ -1,4 +1,4 @@
-function calculateBMR(age, sex, height, weight) {
+function calculateBMR({ age, sex, height, weight }) {
   if (sex === 'male') {
     return Math.round(13.397 * weight + 4.799 * height - 5.677 * age + 88.362);
   }

@@ -25,7 +25,7 @@ function FormComponent({ setAge, setValue, calculateValue }) {
   };
 
   function handleSubmit({ age, sex, height, weight }) {
-    setValue(calculateValue(age, sex, height, weight));
+    setValue(calculateValue({ age, sex, height, weight }));
 
     if (setAge) {
       setAge(age);
